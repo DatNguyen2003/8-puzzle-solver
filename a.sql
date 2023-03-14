@@ -1,0 +1,44 @@
+CREATE TABLE PARKING_LOT (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(255),
+  address VARCHAR(255)
+);
+
+CREATE TABLE PARKING_LEVEL (
+  id INTEGER PRIMARY KEY,
+  level_number INTEGER,
+  capacity INTEGER,
+  parking_lot_id INTEGER,
+  FOREIGN KEY (parking_lot_id) REFERENCES PARKING_LOT(id)
+);
+
+CREATE TABLE PARKING_SPACE (
+  id INTEGER PRIMARY KEY,
+  space_number VARCHAR(255),
+  level_id INTEGER,
+  is_available BOOLEAN,
+  FOREIGN KEY (level_id) REFERENCES PARKING_LEVEL(id)
+);
+
+CREATE TABLE PARKING_TICKET (
+  id INTEGER PRIMARY KEY,
+  entry_time DATETIME,
+  exit_time DATETIME,
+  space_id INTEGER,
+  FOREIGN KEY (space_id) REFERENCES PARKING_SPACE(id)
+);
+
+CREATE TABLE A (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(255),
+  email VARCHAR(255),
+  password VARCHAR(255)
+);
+
+CREATE TABLE A_TICKET (
+  id INTEGER PRIMARY KEY,
+  user_id INTEGER,
+  ticket_id INTEGER,
+  FOREIGN KEY (user_id) REFERENCES A(id),
+  FOREIGN KEY (ticket_id) REFERENCES PARKING_TICKET(id)
+);

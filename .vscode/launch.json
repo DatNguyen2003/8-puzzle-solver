@@ -1,0 +1,42 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "AI_project3_DatNguyen",
+      "request": "launch",
+      "mainClass": "AI_project3_DatNguyen.AI_project3_DatNguyen",
+      "projectName": "VS files_d1c2e20c"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch AI_project1",
+      "request": "launch",
+      "mainClass": "AI_project1",
+      "projectName": "VS files_d1c2e20c"
+    },
+    {
+      "type": "java",
+      "name": "Launch AI_project2_DatNguyen",
+      "request": "launch",
+      "mainClass": "AI_project2_DatNguyen.AI_project2_DatNguyen",
+      "projectName": "VS files_d1c2e20c"
+    },
+    {
+      "type": "java",
+      "name": "Launch Leetcode",
+      "request": "launch",
+      "mainClass": "Leetcode",
+      "projectName": "VS files_d1c2e20c"
+    }
+  ]
+}
